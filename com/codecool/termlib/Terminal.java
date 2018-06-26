@@ -30,8 +30,9 @@ public class Terminal {
      * (i.e.: underlined, dim, bright) to the terminal defaults.
      */
     public void resetStyle() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
-
     /**
      * Clear the whole screen.
      *
