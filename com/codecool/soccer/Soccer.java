@@ -11,7 +11,7 @@ public class Soccer {
 
 	static String[] menuHeader = {"Choose from these choices", "Choose a team", "Statistics", "Winner prediction"};
 	
-	static String[] mainMenu = {"1. Statistics", "2. Who would win?", " ", "0. Go back to Main menu"};
+	static String[] mainMenu = {"1. Statistics", "2. Who would win?"};
 
 	static String[] testTeams = {"1. Spainsss", "2. Italy", "3. Portugal", "4. Brasil", "5. Croatia", "7. Uruguay", "8. Iceland", " ", "0. Go back to Main menu"};
 
@@ -20,14 +20,13 @@ public class Soccer {
 	static String[] testItalyStatistics = {"Goals: 3", "Received goals: 3", "Ball posession: 52%", "Fifa Ranking: 11", " ", "0. Go back to Main menu"};
 
 
-//	public static Map<String, ArrayList<String>> statList = new HashMap<String, ArrayList<String>> () {
-	public static Map<String, String> statList = new HashMap<String, String> () {
+	public static Map<String, ArrayList<String>> statList = new HashMap<String, ArrayList<String>> () {
+//	public static Map<String, String> statList = new HashMap<String, String> () {
 
 		{
-			put("1", "goals:5");
-			put("2", "goals:15");
-			put("3", "goals:25");
-//			put("1", new ArrayList<String>(){{ add("goals2"); add("recieved3"); }});
+			//put("1", "goals:5");
+			//put("2", "goals:15");
+			put("1", new ArrayList<String>(){{ add("goals2"); add("recieved3"); }});
 		}
 	};
 
@@ -50,7 +49,7 @@ public class Soccer {
 	}
 
 
-	public static void displayMenu2(String menu, String header) {
+	public static void displayMenu2(ArrayList menu, String header) {
 
 		com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
 		term.resetStyle();
@@ -59,9 +58,9 @@ public class Soccer {
 		System.out.println("-------------------------");
 
 
-//		for (int i=0; i<menu.length; i++) {
-			System.out.println(menu);
-//		}
+		for (int i=0; i<menu.size(); i++) {
+			System.out.println(menu.get(i));
+		}
 
 		System.out.println();
 		System.out.println("E. Exit program");
