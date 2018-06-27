@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
+import com.codecool.soccer.*;
+
+import static com.codecool.soccer.Team.Teams;
+
 
 public class Soccer {
 
@@ -116,6 +120,8 @@ public class Soccer {
 	public static void menuLoop() {
 		int program = 1;
 		displayMenu(mainMenu, menuHeader[0]);
+
+
 		while(program > 0) {			
 			String active = handleUserInput();
 			if (active.equals("exit")) {
@@ -128,7 +134,10 @@ public class Soccer {
 
     public static void main(String[] args) {
 //      com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
-		menuLoop();
+      	com.codecool.soccer.Team team = new com.codecool.soccer.Team();
+      	team.processData(Teams);
+		System.out.println("test");
+		//menuLoop();
 		
     }
 
