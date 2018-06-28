@@ -85,6 +85,12 @@ public class Soccer {
 //		menuLoop();}
 	}
 
+	public static void matchup() {
+		com.codecool.soccer.Team team = new com.codecool.soccer.Team();
+      	team.processData(Teams);
+		System.out.println("test");
+	}
+
 	public static String getUserChoice() {
 		Scanner input = new Scanner(System.in);
 		String userChoice = input.nextLine();
@@ -99,7 +105,7 @@ public class Soccer {
 		if (answer.equals("1")) {
 			teams();
 		} else if (answer.equals("2")) {
-			System.out.println("it is 2");
+			matchup();
 		} else if (answer.equals("3")) {
 			System.out.println("it is 3");
 		} else if (answer.equals("0")) {
@@ -115,8 +121,10 @@ public class Soccer {
 		
 		return status;
 	}
-	
-	
+
+
+
+
 	public static void menuLoop() {
 		int program = 1;
 		displayMenu(mainMenu, menuHeader[0]);
@@ -134,10 +142,7 @@ public class Soccer {
 
     public static void main(String[] args) {
 //      com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
-      	com.codecool.soccer.Team team = new com.codecool.soccer.Team();
-      	team.processData(Teams);
-		System.out.println("test");
-		//menuLoop();
+		menuLoop();
 		
     }
 
