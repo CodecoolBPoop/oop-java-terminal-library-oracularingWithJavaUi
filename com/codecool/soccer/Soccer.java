@@ -76,7 +76,7 @@ public class Soccer {
 
 			if (header.equals("Choose a team")) {
 				System.out.format("%-20s", menu[i]);
-				if (i%2==0 && i!=0){
+				if (i%2==0){
 					System.out.println("");
 				}
 			}
