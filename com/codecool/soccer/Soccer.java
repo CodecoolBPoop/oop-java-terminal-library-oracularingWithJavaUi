@@ -31,7 +31,9 @@ public class Soccer {
 		{
 			//put("1", "goals:5");
 			//put("2", "goals:15");
-			put("1", new ArrayList<String>(){{ add("goals2"); add("recieved3"); }});
+			put("1", new ArrayList<String>(){{ add("goals1"); add("recieved3"); }});
+			put("2", new ArrayList<String>(){{ add("goals2"); add("recieved3"); }});
+			put("3", new ArrayList<String>(){{ add("goals3"); add("recieved3"); }});
 		}
 	};
 
@@ -76,14 +78,13 @@ public class Soccer {
 		displayMenu(testTeams, menuHeader[1]);
 		System.out.println("df");
 		String answer = getUserChoice();
-		displayMenu2(statList.get(answer), menuHeader[2]);
-
-//		String number = "1";
-//		if (answer.equals(number)) {
-//			//System.out.println("dffff");
-//			displayMenu(dict]number, menuHeader[2]);
-//		} else if (answer.equals("0")) {
-//		menuLoop();}
+		if (answer.equals("0")){
+			menuLoop();
+		}else if (Arrays.asList("1", "2", "3").contains(answer)){
+			displayMenu2(statList.get(answer), menuHeader[2]);
+		} else {
+			System.out.printf("faszom");
+		}
 	}
 
 	public static void matchup() {
