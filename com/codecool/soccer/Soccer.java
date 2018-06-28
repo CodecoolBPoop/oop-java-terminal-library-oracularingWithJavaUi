@@ -14,55 +14,50 @@ import static com.codecool.soccer.Team.Teams;
 
 
 public class Soccer {
+
 	static String[] wordsFromFile;
 	static File f = new File("teams.txt");
 	static File resultsfile = new File("results.txt");
 	static String[] menuHeader = {"Choose from these choices", "Choose a team", "Statistics", "Winner prediction"};
-	
 	static String[] mainMenu = {"1. Statistics", "2. Who would win?", "3. File read"};
-
-	static String[] testTeams = {"1. Spainsss", "2. Italy", "3. Portugal", "4. Brasil", "5. Croatia", "7. Uruguay", "8. Iceland", " ", "0. Go back to Main menu"};
-
-	static String[] testSpainStatistics = {"Goals: 5", "Received goals: 4", "Ball posession: 57%", "Fifa Ranking: 6", " ", "0. Go back to Main menu"};
-
-	static String[] testItalyStatistics = {"Goals: 3", "Received goals: 3", "Ball posession: 52%", "Fifa Ranking: 11", " ", "0. Go back to Main menu"};
-
 
 	public static Map<String, ArrayList<String>> statList = new HashMap<String, ArrayList<String>> () {
 
 		{
-			put("1", new ArrayList<String>(){{ add("Goals: 1"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("2", new ArrayList<String>(){{ add("Goals: 2"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("3", new ArrayList<String>(){{ add("Goals: 3"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("4", new ArrayList<String>(){{ add("Goals: 4"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
-			put("5", new ArrayList<String>(){{ add("Goals: 5"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("6", new ArrayList<String>(){{ add("Goals: 6"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("7", new ArrayList<String>(){{ add("Goals: 7"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
-			put("8", new ArrayList<String>(){{ add("Goals: 8"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
-			put("9", new ArrayList<String>(){{ add("Goals: 9"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
-			put("10", new ArrayList<String>(){{ add("Goals: 10"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("11", new ArrayList<String>(){{ add("Goals: 11"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("12", new ArrayList<String>(){{ add("Goals: 12"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("13", new ArrayList<String>(){{ add("Goals: 13"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("14", new ArrayList<String>(){{ add("Goals: 14"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("15", new ArrayList<String>(){{ add("Goals: 15"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("16", new ArrayList<String>(){{ add("Goals: 16"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("17", new ArrayList<String>(){{ add("Goals: 17"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("18", new ArrayList<String>(){{ add("Goals: 18"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("19", new ArrayList<String>(){{ add("Goals: 19"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("20", new ArrayList<String>(){{ add("Goals: 20"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("21", new ArrayList<String>(){{ add("Goals: 21"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("22", new ArrayList<String>(){{ add("Goals: 22"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("23", new ArrayList<String>(){{ add("Goals: 23"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("24", new ArrayList<String>(){{ add("Goals: 24"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("25", new ArrayList<String>(){{ add("Goals: 25"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("26", new ArrayList<String>(){{ add("Goals: 26"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("27", new ArrayList<String>(){{ add("Goals: 27"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("28", new ArrayList<String>(){{ add("Goals: 28"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("29", new ArrayList<String>(){{ add("Goals: 29"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("30", new ArrayList<String>(){{ add("Goals: 30"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("31", new ArrayList<String>(){{ add("Goals: 31"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
-			put("32", new ArrayList<String>(){{ add("Goals: 32"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("1", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  2"); add("Ball posession: 45%"); add("Fifa Ranking:   45");}});
+			put("2", new ArrayList<String>(){{ add("Goals:           8"); add("Received goals:  2"); add("Ball posession: 59%"); add("Fifa Ranking:    9");}});
+			put("3", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  4"); add("Ball posession: 51%"); add("Fifa Ranking:    4");}});
+			put("4", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  5"); add("Ball posession: 37%"); add("Fifa Ranking:   22");}});
+			put("5", new ArrayList<String>(){{ add("Goals:           8"); add("Received goals:  4"); add("Ball posession: 44%"); add("Fifa Ranking:   70");}});
+			put("6", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 42%"); add("Fifa Ranking:   22");}});
+			put("7", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 40%"); add("Fifa Ranking:   24");}});
+			put("8", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 35%"); add("Fifa Ranking:   27");}});
+			put("9", new ArrayList<String>(){{ add("Goals:           1"); add("Received goals:  9"); add("Ball posession: 41%"); add("Fifa Ranking:   55");}});
+			put("10", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 58%"); add("Fifa Ranking:   67");}});
+			put("11", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  1"); add("Ball posession: 58%"); add("Fifa Ranking:    2");}});
+			put("12", new ArrayList<String>(){{ add("Goals:           1"); add("Received goals:  5"); add("Ball posession: 51%"); add("Fifa Ranking:    8");}});
+			put("13", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  1"); add("Ball posession: 52%"); add("Fifa Ranking:   10");}});
+			put("14", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  4"); add("Ball posession: 48%"); add("Fifa Ranking:   48");}});
+			put("15", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 46%"); add("Fifa Ranking:   34");}});
+			put("16", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  7"); add("Ball posession: 45%"); add("Fifa Ranking:   21");}});
+			put("17", new ArrayList<String>(){{ add("Goals:           7"); add("Received goals:  1"); add("Ball posession: 49%"); add("Fifa Ranking:   20");}});
+			put("18", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  5"); add("Ball posession: 65%"); add("Fifa Ranking:    5");}});
+			put("19", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  0"); add("Ball posession: 44%"); add("Fifa Ranking:   14");}});
+
+			put("20", new ArrayList<String>(){{ add("Goals:           0"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("21", new ArrayList<String>(){{ add("Goals:           1"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("22", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("23", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("24", new ArrayList<String>(){{ add("Goals:           4"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("25", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("26", new ArrayList<String>(){{ add("Goals:           6"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("27", new ArrayList<String>(){{ add("Goals:           7"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("28", new ArrayList<String>(){{ add("Goals:           8"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("29", new ArrayList<String>(){{ add("Goals:           9"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+			put("30", new ArrayList<String>(){{ add("Goals:           0"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
+
+			put("31", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 50%"); add("Fifa Ranking:   41");}});
+			put("32", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 67%"); add("Fifa Ranking:    1");}});
 		}
 	};
 
@@ -72,7 +67,7 @@ public class Soccer {
 		term.resetStyle();
 		System.out.println("\033[0;31mWorldcup Oracle v1.0\033[0;37m \n");
 		System.out.println(header);
-		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
+		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
 
 		for (int i=0; i<menu.length; i++) {
 
@@ -101,7 +96,7 @@ public class Soccer {
 		term.resetStyle();
 		System.out.println("\033[0;31mWorldcup Oracle v1.0\033[0;37m \n");
 		System.out.println(header);
-		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
+		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
 
 
 		for (int i=0; i<menu.size(); i++) {
@@ -110,8 +105,6 @@ public class Soccer {
 
 		System.out.println();
 		System.out.println("E. Exit program");
-
-
 
 	}
 
@@ -140,31 +133,26 @@ public class Soccer {
 		team.processData(Teams);
 		// magicNum = team.teamNamesMagicNumber;
 		teamName = team.teamNames(Team.teamNamesMagicNumber);
-		//System.out.println(Team.teamNamesMagicNumber);
-		//System.out.println(Team.generateNumber());
 		//team.mergeTwoList(Team.generateNumber(), teamName);
 		displayMenu(wordsFromFile, menuHeader[1]);
-		//System.out.println("Please choose the first team: ");
 		String answer = getUserChoice();
 		if (answer.equals("0")){
 			menuLoop();
 		}else if (Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",
 				"17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32").contains(answer)) {
-			//String answer2 = getUserChoice();
-
 			List keys = new ArrayList(Team.teamNamesMagicNumber.keySet());
 			int team1 = Integer.parseInt(answer);
 			Object obj = keys.get(team1-1);
-			//System.out.println(obj);
+
 			Double value1 = Team.teamNamesMagicNumber.get(obj);
-			//System.out.println(value1);
+
 			System.out.println("Please choose the second team: ");
 			String answer2 = getUserChoice();
 			int team2 = Integer.parseInt(answer2);
 			Object obj2 = keys.get(team2-1);
-			//System.out.println(obj2);
+
 			Double value2 = Team.teamNamesMagicNumber.get(obj2);
-			//System.out.println(value1);
+
 			if (value1 > value2) {
 				System.out.println("The winner would possible be: ");
 				System.out.println(obj);
