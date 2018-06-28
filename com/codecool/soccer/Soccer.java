@@ -87,7 +87,7 @@ public class Soccer {
 
 	public static void matchup() {
 		com.codecool.soccer.Team team = new com.codecool.soccer.Team();
-      	team.processData(Teams);
+      		team.mergeTwoList(generateNumber(),teamNames(teamNamesMagicNumber));
 		System.out.println("test");
 	}
 
