@@ -14,6 +14,7 @@ import static com.codecool.soccer.Team.Teams;
 public class Soccer {
 	static String[] wordsFromFile;
 	static File f = new File("teams.txt");
+	static File resultsfile = new File("results.txt");
 	static String[] menuHeader = {"Choose from these choices", "Choose a team", "Statistics", "Winner prediction"};
 	
 	static String[] mainMenu = {"1. Statistics", "2. Who would win?", "3. File read"};
@@ -26,14 +27,40 @@ public class Soccer {
 
 
 	public static Map<String, ArrayList<String>> statList = new HashMap<String, ArrayList<String>> () {
-//	public static Map<String, String> statList = new HashMap<String, String> () {
 
 		{
-			//put("1", "goals:5");
-			//put("2", "goals:15");
-			put("1", new ArrayList<String>(){{ add("goals1"); add("recieved3"); }});
-			put("2", new ArrayList<String>(){{ add("goals2"); add("recieved3"); }});
-			put("3", new ArrayList<String>(){{ add("goals3"); add("recieved3"); }});
+			put("1", new ArrayList<String>(){{ add("Goals: 1"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("2", new ArrayList<String>(){{ add("Goals: 2"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("3", new ArrayList<String>(){{ add("Goals: 3"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("4", new ArrayList<String>(){{ add("Goals: 4"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
+			put("5", new ArrayList<String>(){{ add("Goals: 5"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("6", new ArrayList<String>(){{ add("Goals: 6"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("7", new ArrayList<String>(){{ add("Goals: 7"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
+			put("8", new ArrayList<String>(){{ add("Goals: 8"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
+			put("9", new ArrayList<String>(){{ add("Goals: 9"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa	Ranking: 6");}});
+			put("10", new ArrayList<String>(){{ add("Goals: 10"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("11", new ArrayList<String>(){{ add("Goals: 11"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("12", new ArrayList<String>(){{ add("Goals: 12"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("13", new ArrayList<String>(){{ add("Goals: 13"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("14", new ArrayList<String>(){{ add("Goals: 14"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("15", new ArrayList<String>(){{ add("Goals: 15"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("16", new ArrayList<String>(){{ add("Goals: 16"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("17", new ArrayList<String>(){{ add("Goals: 17"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("18", new ArrayList<String>(){{ add("Goals: 18"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("19", new ArrayList<String>(){{ add("Goals: 19"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("20", new ArrayList<String>(){{ add("Goals: 20"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("21", new ArrayList<String>(){{ add("Goals: 21"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("22", new ArrayList<String>(){{ add("Goals: 22"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("23", new ArrayList<String>(){{ add("Goals: 23"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("24", new ArrayList<String>(){{ add("Goals: 24"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("25", new ArrayList<String>(){{ add("Goals: 25"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("26", new ArrayList<String>(){{ add("Goals: 26"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("27", new ArrayList<String>(){{ add("Goals: 27"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("28", new ArrayList<String>(){{ add("Goals: 28"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("29", new ArrayList<String>(){{ add("Goals: 29"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("30", new ArrayList<String>(){{ add("Goals: 30"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("31", new ArrayList<String>(){{ add("Goals: 31"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
+			put("32", new ArrayList<String>(){{ add("Goals: 32"); add("Received goals: 4"); add("Ball posession: 57%"); add("Fifa Ranking: 6");}});
 		}
 	};
 
@@ -43,18 +70,25 @@ public class Soccer {
 		term.resetStyle();
 		System.out.println("\033[0;31mWorldcup Oracle v1.0\033[0;37m \n");
 		System.out.println(header);
-		System.out.println("-------------------------");
+		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
 
-		
 		for (int i=0; i<menu.length; i++) {
-			System.out.println(menu[i]);
+
+			if (header.equals("Choose a team")) {
+				System.out.format("%-20s", menu[i]);
+				if (i%2==0 && i!=0){
+					System.out.println("");
+				}
+			}
+			else{
+				System.out.println(menu[i]);
+			}
 		}
 
 		System.out.println();
 		System.out.println("E. Exit program");
     
 	}
-
 
 	public static void displayMenu2(ArrayList menu, String header) {
 
@@ -72,34 +106,42 @@ public class Soccer {
 		System.out.println();
 		System.out.println("E. Exit program");
 
+
+
 	}
 
 	public static void teams() {
-		displayMenu(testTeams, menuHeader[1]);
-		System.out.println("df");
+
+		displayMenu(wordsFromFile, menuHeader[1]);
 		String answer = getUserChoice();
 		if (answer.equals("0")){
 			menuLoop();
-		}else if (Arrays.asList("1", "2", "3").contains(answer)){
+		}else if (Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",
+				"17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32").contains(answer)){
 			displayMenu2(statList.get(answer), menuHeader[2]);
+		} else if (answer.equals("e")) {
+			System.exit(0);
 		} else {
-			System.out.printf("faszom");
+			System.out.printf("error");
 		}
 	}
 
 	public static void matchup() {
+
 		com.codecool.soccer.Team team = new com.codecool.soccer.Team();
       	team.processData(Teams);
 		System.out.println("test");
 	}
 
 	public static String getUserChoice() {
+
 		Scanner input = new Scanner(System.in);
 		String userChoice = input.nextLine();
 		return userChoice;
 	}
 
 	static String handleUserInput() {
+
 		String answer = getUserChoice();
 		String status = "keepGoing";
 		
@@ -112,7 +154,7 @@ public class Soccer {
 		} else if (answer.equals("0")) {
 			menuLoop();
 		} else if (answer.equals("e")) {
-			System.out.println("vdvbdfg");
+			System.out.println("Thanks for using oracularing");
 			status = "exit";
 			System.exit(0);			
 		} else {
@@ -146,6 +188,13 @@ public class Soccer {
 			wordsFromFile[count] = fileInput.nextLine();
 			count++;
 		}
+	}
+
+	static void fileProcess()
+	{
+		//String[] items = wordsFromFile.split(",");
+		//List<String> itemList = Arrays.asList(items);
+		//System.out.println(itemList);
 	}
 
 	public static void menuLoop() {
