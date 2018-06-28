@@ -2,20 +2,21 @@ package com.codecool.soccer;
 
 import com.codecool.termlib.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.File;
+import java.util.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import com.codecool.soccer.*;
 
 import static com.codecool.soccer.Team.Teams;
 
 
 public class Soccer {
-
+	static String[] wordsFromFile;
+	static File f = new File("teams.txt");
 	static String[] menuHeader = {"Choose from these choices", "Choose a team", "Statistics", "Winner prediction"};
 	
-	static String[] mainMenu = {"1. Statistics", "2. Who would win?"};
+	static String[] mainMenu = {"1. Statistics", "2. Who would win?", "3. File read"};
 
 	static String[] testTeams = {"1. Spainsss", "2. Italy", "3. Portugal", "4. Brasil", "5. Croatia", "7. Uruguay", "8. Iceland", " ", "0. Go back to Main menu"};
 
@@ -95,7 +96,6 @@ public class Soccer {
 		Scanner input = new Scanner(System.in);
 		String userChoice = input.nextLine();
 		return userChoice;
-	
 	}
 
 	static String handleUserInput() {
@@ -107,7 +107,7 @@ public class Soccer {
 		} else if (answer.equals("2")) {
 			matchup();
 		} else if (answer.equals("3")) {
-			System.out.println("it is 3");
+			System.out.println(Arrays.toString(wordsFromFile));
 		} else if (answer.equals("0")) {
 			menuLoop();
 		} else if (answer.equals("e")) {
@@ -118,32 +118,49 @@ public class Soccer {
 			System.out.println("invalid");
 			handleUserInput();
 		}
-		
 		return status;
 	}
 
+	//Counts the lines in the file
+	static int lineCount() throws FileNotFoundException
+	{
+		Scanner fileInput = new Scanner(f);
+		int lines = 0;
 
+		while(fileInput.hasNextLine())
+		{
+			lines++;
+			fileInput.nextLine();
+		}
+		return lines;
+	}
 
+	static void fileRead() throws FileNotFoundException
+	{
+		Scanner fileInput = new Scanner(f);
+		wordsFromFile = new String[lineCount()];
+		int count = 0;
+		while(fileInput.hasNextLine())
+		{
+			wordsFromFile[count] = fileInput.nextLine();
+			count++;
+		}
+	}
 
 	public static void menuLoop() {
 		int program = 1;
 		displayMenu(mainMenu, menuHeader[0]);
-
-
 		while(program > 0) {			
 			String active = handleUserInput();
 			if (active.equals("exit")) {
 				program --;
 			}
 		}
-
 	}
-	
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //      com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
+		fileRead();
 		menuLoop();
-		
     }
-
 }
