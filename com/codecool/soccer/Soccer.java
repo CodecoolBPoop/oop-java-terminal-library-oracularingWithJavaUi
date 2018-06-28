@@ -2,11 +2,13 @@ package com.codecool.soccer;
 
 import com.codecool.termlib.*;
 
+import java.util.concurrent.TimeUnit;
 import java.io.File;
+import java.lang.reflect.Array;
 import java.util.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import com.codecool.soccer.*;
+import com.codecool.soccer.Team;
 
 import static com.codecool.soccer.Team.Teams;
 
@@ -87,7 +89,10 @@ public class Soccer {
 
 		System.out.println();
 		System.out.println("E. Exit program");
-    
+		System.out.println();
+		System.out.println();
+		System.out.println("Enter your choice: ");
+
 	}
 
 	public static void displayMenu2(ArrayList menu, String header) {
@@ -96,7 +101,7 @@ public class Soccer {
 		term.resetStyle();
 		System.out.println("\033[0;31mWorldcup Oracle v1.0\033[0;37m \n");
 		System.out.println(header);
-		System.out.println("-------------------------");
+		System.out.println("\033[0;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0;37m");
 
 
 		for (int i=0; i<menu.size(); i++) {
@@ -127,11 +132,49 @@ public class Soccer {
 	}
 
 	public static void matchup() {
-
+		com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
+		term.resetStyle();
 		com.codecool.soccer.Team team = new com.codecool.soccer.Team();
-      	team.processData(Teams);
-		System.out.println("test");
+		HashMap<String, Double> magicNum = new HashMap<>();
+		ArrayList<String> teamName = new ArrayList<>();
+		team.processData(Teams);
+		// magicNum = team.teamNamesMagicNumber;
+		teamName = team.teamNames(Team.teamNamesMagicNumber);
+		//System.out.println(Team.teamNamesMagicNumber);
+		//System.out.println(Team.generateNumber());
+		//team.mergeTwoList(Team.generateNumber(), teamName);
+		displayMenu(wordsFromFile, menuHeader[1]);
+		//System.out.println("Please choose the first team: ");
+		String answer = getUserChoice();
+		if (answer.equals("0")){
+			menuLoop();
+		}else if (Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",
+				"17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32").contains(answer)) {
+			//String answer2 = getUserChoice();
+
+			List keys = new ArrayList(Team.teamNamesMagicNumber.keySet());
+			int team1 = Integer.parseInt(answer);
+			Object obj = keys.get(team1-1);
+			//System.out.println(obj);
+			Double value1 = Team.teamNamesMagicNumber.get(obj);
+			//System.out.println(value1);
+			System.out.println("Please choose the second team: ");
+			String answer2 = getUserChoice();
+			int team2 = Integer.parseInt(answer2);
+			Object obj2 = keys.get(team2-1);
+			//System.out.println(obj2);
+			Double value2 = Team.teamNamesMagicNumber.get(obj2);
+			//System.out.println(value1);
+			if (value1 > value2) {
+				System.out.println("The winner would possible be: ");
+				System.out.println(obj);
+			}else {
+				System.out.println("The winner would possible be: ");
+				System.out.println(obj2);
+			}
+		}
 	}
+
 
 	public static String getUserChoice() {
 
@@ -190,13 +233,6 @@ public class Soccer {
 		}
 	}
 
-	static void fileProcess()
-	{
-		//String[] items = wordsFromFile.split(",");
-		//List<String> itemList = Arrays.asList(items);
-		//System.out.println(itemList);
-	}
-
 	public static void menuLoop() {
 		int program = 1;
 		displayMenu(mainMenu, menuHeader[0]);
@@ -209,7 +245,6 @@ public class Soccer {
 	}
 
     public static void main(String[] args) throws IOException {
-//      com.codecool.termlib.Terminal term = new com.codecool.termlib.Terminal();
 		fileRead();
 		menuLoop();
     }
