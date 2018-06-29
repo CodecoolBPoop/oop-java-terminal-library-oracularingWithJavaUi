@@ -43,19 +43,17 @@ public class Soccer {
 			put("17", new ArrayList<String>(){{ add("Goals:           7"); add("Received goals:  1"); add("Ball posession: 49%"); add("Fifa Ranking:   20");}});
 			put("18", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  5"); add("Ball posession: 65%"); add("Fifa Ranking:    5");}});
 			put("19", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  0"); add("Ball posession: 44%"); add("Fifa Ranking:   14");}});
-
-			put("20", new ArrayList<String>(){{ add("Goals:           0"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("21", new ArrayList<String>(){{ add("Goals:           1"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("22", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("23", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("24", new ArrayList<String>(){{ add("Goals:           4"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("25", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("26", new ArrayList<String>(){{ add("Goals:           6"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("27", new ArrayList<String>(){{ add("Goals:           7"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("28", new ArrayList<String>(){{ add("Goals:           8"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("29", new ArrayList<String>(){{ add("Goals:           9"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-			put("30", new ArrayList<String>(){{ add("Goals:           0"); add("Received goals:  4"); add("Ball posession: 57%"); add("Fifa Ranking:    6");}});
-
+			put("20", new ArrayList<String>(){{ add("Goals:           4"); add("Received goals:  3"); add("Ball posession: 57%"); add("Fifa Ranking:    61");}});
+			put("21", new ArrayList<String>(){{ add("Goals:           5"); add("Received goals:  4"); add("Ball posession: 55%"); add("Fifa Ranking:    6");}});
+			put("22", new ArrayList<String>(){{ add("Goals:           6"); add("Received goals:  5"); add("Ball posession: 66%"); add("Fifa Ranking:    10");}});
+			put("23", new ArrayList<String>(){{ add("Goals:           4"); add("Received goals:  2"); add("Ball posession: 48%"); add("Fifa Ranking:    16");}});
+			put("24", new ArrayList<String>(){{ add("Goals:           8"); add("Received goals:  2"); add("Ball posession: 57%"); add("Fifa Ranking:    3");}});
+			put("25", new ArrayList<String>(){{ add("Goals:           4"); add("Received goals:  3"); add("Ball posession: 45%"); add("Fifa Ranking:    27");}});
+			put("26", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  1"); add("Ball posession: 46%"); add("Fifa Ranking:    12");}});
+			put("27", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  3"); add("Ball posession: 41%"); add("Fifa Ranking:    57");}});
+			put("28", new ArrayList<String>(){{ add("Goals:           3"); add("Received goals:  1"); add("Ball posession: 50%"); add("Fifa Ranking:    15");}});
+			put("29", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  5"); add("Ball posession: 51%"); add("Fifa Ranking:    36");}});
+			put("30", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 52%"); add("Fifa Ranking:    11");}});
 			put("31", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  2"); add("Ball posession: 50%"); add("Fifa Ranking:   41");}});
 			put("32", new ArrayList<String>(){{ add("Goals:           2"); add("Received goals:  4"); add("Ball posession: 67%"); add("Fifa Ranking:    1");}});
 		}
